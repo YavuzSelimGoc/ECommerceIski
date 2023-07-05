@@ -1,10 +1,9 @@
-import { CarouselComponent } from './carousel/carousel.component';
 import { NgModule } from '@angular/core';
 
-import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,9 +20,6 @@ import { AddCategoryComponent } from './components/add-category/add-category.com
 
 import { BasketComponent } from './components/basket/basket.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
-import { CarouselItemDirective } from './carousel/carousel-item.directive';
-import { CarouselItemElementDirective } from './carousel/carousel-item-element.directive';
-
 
 @NgModule({
   declarations: [
@@ -38,24 +34,18 @@ import { CarouselItemElementDirective } from './carousel/carousel-item-element.d
     PublicHeaderComponent,
     FooterComponent,
     AddCategoryComponent,
-CarouselComponent,
     BasketComponent,
     ProductDetailsComponent,
-    CarouselItemDirective, 
-    CarouselItemElementDirective
-
- 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-     HttpClientModule,
+    HttpClientModule,
     FormsModule,
-    ReactiveFormsModule, 
+    ReactiveFormsModule,
     BrowserAnimationsModule,
-
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

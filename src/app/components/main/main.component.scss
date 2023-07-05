@@ -1,0 +1,29 @@
+.slider {
+  background: gray;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.sliders {
+  width: 500px;
+  height: 500px;
+  position: relative;
+}
+.slider-next {
+  position: absolute;
+  right: 5px;
+  top: calc(50% - 16px);
+  color: white;
+  background-color: silver;
+  padding: 5px;
+  border-radius: 50%;
+}
+.slider-prev {
+  position: absolute;
+  left: 5px;
+  top: calc(50% - 16px);
+  color: white;
+  background-color: silver;
+  padding: 5px;
+  border-radius: 50%;
+}
