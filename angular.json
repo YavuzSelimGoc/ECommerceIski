@@ -30,9 +30,70 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.css",
+              "src/assets/thema/css/animate.css",
+              "node_modules/owl.carousel/src/scss/owl.carousel.scss",
+              "src/assets/thema/css/nice-select.css",
+              "src/assets/thema/css/all.css",
+              "src/assets/thema/css/flaticon.css",
+              "src/assets/thema/css/themify-icons.css",
+              "src/assets/thema/css/magnific-popup.css",
+              "src/assets/thema/css/slick.css",
+              "src/assets/thema/css/price_rangs.css",  
+              "src/assets/thema/css/style.css",
+              
+
+              "src/assets/plugins/fontawesome-free/css/all.min.css",
+              "src/assets/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css",
+              "src/assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css",
+             
+              "src/assets/css/adminlte.min.css"
+            
+            
+
+         
+              
+            
             ],
-            "scripts": []
+            "scripts": [
+              
+              "src/assets/thema/js/jquery-1.12.1.min.js",
+              "src/assets/thema/js/popper.min.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "src/assets/thema/js/jquery.magnific-popup.js",
+              "src/assets/thema/js/swiper.min.js",
+              "src/assets/thema/js/masonry.pkgd.js",
+              "node_modules/owl.carousel/dist/owl.carousel.min.js",
+              "src/assets/thema/js/jquery.nice-select.min.js",
+              "src/assets/thema/js/slick.min.js",
+              "src/assets/thema/js/jquery.counterup.min.js",
+              "src/assets/thema/js/waypoints.min.js",
+              "src/assets/thema/js/contact.js",
+              "src/assets/thema/js/jquery.ajaxchimp.min.js",
+              "src/assets/thema/js/jquery.form.js",
+              "src/assets/thema/js/jquery.validate.min.js",
+              "src/assets/thema/js/mail-script.js",
+         
+              "src/assets/thema/js/custom.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "src/assets/plugins/jquery/jquery.min.js",
+              "src/assets/plugins/jquery-ui/jquery-ui.min.js",
+              "src/assets/plugins/bootstrap/js/bootstrap.bundle.min.js",
+           
+              "src/assets/plugins/moment/moment.min.js",
+    
+              "src/assets/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js",
+              "src/assets/plugins/summernote/summernote-bs4.min.js",
+              "src/assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js",
+              "src/assets/js/adminlte.js",
+              "src/assets/js/pages/dashboard.js"
+           
+         
+
+              
+            ]
           },
           "configurations": {
             "production": {

@@ -1,0 +1,10 @@
+.cascading-right {
+    margin-right: -80px;
+    z-index: 1;
+  }
+
+  @media (max-width: 720.98px) {
+    .cascading-right {
+      margin-right: 0;
+    }
+  }
