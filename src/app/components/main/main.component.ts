@@ -9,10 +9,10 @@ import { trigger, transition, animate, style } from '@angular/animations';
     trigger('fade', [
       transition('void => *', [
         style({ opacity: 0 }),
-        animate('300ms', style({ opacity: 1 })),
+        animate('300ms', style({ opacity: 0 })),
       ]),
       transition('* => void', [
-        style({ opacity: 1 }),
+        style({ opacity: 0 }),
         animate('300ms', style({ opacity: 0 })),
       ]),
     ]),
@@ -27,7 +27,7 @@ export class MainComponent {
     }, 5000);
   }
   prev() {
-    debugger;
+   
 
     if (this.current == 0) {
       this.current = this.items.length - 1;
@@ -37,7 +37,7 @@ export class MainComponent {
   }
 
   next() {
-    debugger;
+   
     if (this.current == this.items.length - 1) {
       this.current = 0;
     } else {

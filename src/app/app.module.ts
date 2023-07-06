@@ -20,6 +20,13 @@ import { AddCategoryComponent } from './components/add-category/add-category.com
 
 import { BasketComponent } from './components/basket/basket.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { ListCategoryComponent } from './components/list-category/list-category.component';
+import { AddProductComponent } from './components/add-product/add-product.component';
+import { ListProductComponent } from './components/list-product/list-product.component';
+import { UploadsComponent } from './components/uploads/uploads.component';
+import { UpdateProductComponent } from './components/update-product/update-product.component';
+import { UpdateCategoryComponent } from './components/update-category/update-category.component';
+
 
 @NgModule({
   declarations: [
@@ -36,6 +43,13 @@ import { ProductDetailsComponent } from './components/product-details/product-de
     AddCategoryComponent,
     BasketComponent,
     ProductDetailsComponent,
+    ListCategoryComponent,
+    AddProductComponent,
+    ListProductComponent,
+    UploadsComponent,
+    UpdateProductComponent,
+    UpdateCategoryComponent,
+ 
   ],
   imports: [
     BrowserModule,
