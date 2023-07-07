@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -10,7 +11,7 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class LoginComponent implements OnInit{
   loginForm:FormGroup
-  constructor(private formBuilder:FormBuilder,private authService:AuthService,private router:Router) { }
+  constructor(private formBuilder:FormBuilder,private authService:AuthService,private router:Router ,private toastrService:ToastrService) { }
 
   ngOnInit(): void {
     this.createLoginForm();
@@ -27,17 +28,17 @@ export class LoginComponent implements OnInit{
       
         let loginModel = Object.assign({},this.loginForm.value)
         this.authService.login(loginModel).subscribe(response=>{
+          this.toastrService.success("Giriş İşlemi Başarılı")
           localStorage.setItem("token",response.token)
           localStorage.setItem("username",response.userName)
           this.router.navigate(["/admin"])
         },responseError=>{
           console.log(responseError)
           // this.toastrService.error("Giriş Bilgileri Yanlış")
-          console.log("oha")
+          this.toastrService.error("Giriş Bilgileri Yanlış")
         })
       }
-      // else{this.toastrService.error("Giriş Bilgileri Yanlış")}
-      console.log("oha")
+     
     }
   
 }
