@@ -1,0 +1,25 @@
+
+.sliders {
+    width: 262.5px;
+    margin-right: 20px;
+  
+  }
+  .slider-next {
+    position:fixed;
+    right: 5px;
+    top: calc(50% - 16px);
+    color: white;
+    background-color: silver;
+    padding: 5px;
+    border-radius: 50%;
+  }
+  .slider-prev {
+    position: fixed;
+    left: 5px;
+    top: calc(50% - 16px);
+    color: white;
+    background-color: silver;
+    padding: 5px;
+    border-radius: 50%;
+  }
+  

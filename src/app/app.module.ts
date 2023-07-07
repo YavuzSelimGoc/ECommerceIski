@@ -26,6 +26,7 @@ import { ListProductComponent } from './components/list-product/list-product.com
 import { UploadsComponent } from './components/uploads/uploads.component';
 import { UpdateProductComponent } from './components/update-product/update-product.component';
 import { UpdateCategoryComponent } from './components/update-category/update-category.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 
 @NgModule({
@@ -49,6 +50,7 @@ import { UpdateCategoryComponent } from './components/update-category/update-cat
     UploadsComponent,
     UpdateProductComponent,
     UpdateCategoryComponent,
+    CarouselComponent,
  
   ],
   imports: [

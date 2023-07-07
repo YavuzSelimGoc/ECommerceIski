@@ -15,7 +15,7 @@ export class AuthService {
   constructor(private httpclient:HttpClient) { }
   login(loginModel:Login){
     return this.httpclient.post<TokenModel>
-    (this.apiUrl+"auth/login",loginModel)
+    (this.apiUrl+"api/auth/login",loginModel)
   }
   
   isAuthenticated(){

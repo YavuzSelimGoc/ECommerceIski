@@ -1,0 +1,50 @@
+
+<section class="product_list best_seller section_padding">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-12">
+          <div class="section_tittle text-center">
+            <h2>Best Sellers <span>shop</span></h2>
+          </div>
+        </div>
+      </div>
+      <div class="row align-items-center justify-content-between">
+        <div class="col-lg-12">
+          <div class="best_product_slider owl-carousel owl-loaded owl-drag owl-grab">
+            <div class="owl-stage-outer">
+              <div class="owl-stage ">
+                <div class="row">
+                  <div *ngFor="let item of items  | slice:0:4;; let i=index " class="sliders">
+                    <ng-container *ngFor="let item of items; let i = index">
+              
+                      <div class="owl-item " *ngIf="current == i" [ngStyle]="{
+                        'position': current == i ?'': 'absolute' ,
+               }" @fade>
+                        <div class="single_product_item">
+                          <img src="../../../assets/thema/img/product/product_{{item}}.png" alt="">
+                          <div class="single_product_text">
+                            <h4>Quartz Belt Watch {{item}}</h4>
+                            <h3>$150.00</h3>
+                          </div>
+                        </div>
+                        
+                      </div>
+                    </ng-container>
+                    
+                   
+                  </div>
+              
+                  
+                 </div>
+              </div>
+  
+            </div>
+         
+            <div class="owl-nav"><button type="button" role="presentation" class="owl-prev" (click)="next()">next</button><button
+                type="button" role="presentation" class="owl-next" (click)="prev()">previous</button></div>
+            <div class="owl-dots disabled"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
