@@ -5,7 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
-
+import { CKEditorModule } from 'ckeditor4-angular';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PublicLayoutComponent } from './components/public-layout/public-layout.component';
@@ -28,6 +28,9 @@ import { UploadsComponent } from './components/uploads/uploads.component';
 import { UpdateProductComponent } from './components/update-product/update-product.component';
 import { UpdateCategoryComponent } from './components/update-category/update-category.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { UserLoginComponent } from './components/user-login/user-login.component';
+import { ProductPipe } from './pipe/product.pipe';
+import { CkeditorTestComponent } from './components/ckeditor-test/ckeditor-test.component';
 
 
 @NgModule({
@@ -52,6 +55,9 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     UpdateProductComponent,
     UpdateCategoryComponent,
     CarouselComponent,
+    UserLoginComponent,
+    ProductPipe,
+    CkeditorTestComponent,
  
   ],
   imports: [
@@ -60,6 +66,7 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    CKEditorModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot({
       positionClass:"toast-bottom-right"

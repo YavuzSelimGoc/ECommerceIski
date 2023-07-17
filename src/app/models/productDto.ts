@@ -6,5 +6,6 @@ export interface ProductDto{
     categoryName:string;
     productStock:number;
     productPrice:number;
+    productContent:string;
     productStatus:boolean
 }

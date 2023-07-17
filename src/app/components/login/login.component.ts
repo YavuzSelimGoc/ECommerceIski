@@ -31,6 +31,7 @@ export class LoginComponent implements OnInit{
           this.toastrService.success("Giriş İşlemi Başarılı")
           localStorage.setItem("token",response.token)
           localStorage.setItem("username",response.userName)
+          localStorage.setItem("userType",response.userType)
           this.router.navigate(["/admin"])
         },responseError=>{
           console.log(responseError)

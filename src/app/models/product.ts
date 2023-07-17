@@ -6,5 +6,6 @@ export interface Product{
     categoryId:number;
     productStock:number;
     productPrice:number;
+    productContent:number;
     productStatus:boolean
 }

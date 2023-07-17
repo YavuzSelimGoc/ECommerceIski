@@ -34,6 +34,14 @@ export class ProductService {
     let newPath=this.apiUrls+"product/getallActive";
     return this.httpClient.get<ListResponseModel<ProductDto>>(newPath)
   }
+  getProductActiveDtoByCategory( categoryId:number):Observable<ListResponseModel<ProductDto>>{
+    let newPath=this.apiUrls+"product/getallDtoByCategory?categoryId="+categoryId;
+    return this.httpClient.get<ListResponseModel<ProductDto>>(newPath)
+  }
+  getProductActiveDtoById( id:number):Observable<ListResponseModel<ProductDto>>{
+    let newPath=this.apiUrls+"product/getallDtoById?id="+id;
+    return this.httpClient.get<ListResponseModel<ProductDto>>(newPath)
+  }
   getProductById(productID):Observable <ResponseModel_Data<Product>> {
     let newPath=this.apiUrls + "product/GetById/?id="+productID
     return this.httpClient

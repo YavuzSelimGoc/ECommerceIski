@@ -56,7 +56,7 @@ export class UpdateProductComponent implements OnInit{
       productId:["",Validators.required],
       categoryId:["",Validators.required],
       productName:[null,Validators.required],
-     
+      productContent:[null,Validators.required],
       productDescription:["",Validators.required],
       productStock:["",Validators.required],
       productImage:["",Validators.required],
@@ -104,6 +104,7 @@ export class UpdateProductComponent implements OnInit{
       productImage:[this.product.productImage],
       productStock:[this.product.productStock],
       productPrice:[this.product.productPrice],
+      productContent:[this.product.productContent],
       productStatus:[this.product.productStatus],
     })
   }

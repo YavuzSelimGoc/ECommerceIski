@@ -13,19 +13,23 @@ import { AddProductComponent } from './components/add-product/add-product.compon
 import { ListCategoryComponent } from './components/list-category/list-category.component';
 import { ListProductComponent } from './components/list-product/list-product.component';
 import { UpdateCategoryComponent } from './components/update-category/update-category.component';
+import { UserLoginComponent } from './components/user-login/user-login.component';
+import { CkeditorTestComponent } from './components/ckeditor-test/ckeditor-test.component';
 
 const routes: Routes = [
   {
     path: "", component: PublicLayoutComponent, children: [
       {path:"",pathMatch:"full",component:MainComponent},
       {path:"sepet",component:BasketComponent},
-      {path:"productDetails",component:ProductDetailsComponent},
+      {path:"productDetails/:id",component:ProductDetailsComponent},
+      {path:"product/:categoryId",component:MainComponent},
+      {path:"ck",component:CkeditorTestComponent},
     ]
   },
   {
-    path: "login", component: LoginComponent, children: [
-      { path: "", pathMatch: "full", component: LoginComponent },
-      { path: "login", component: LoginComponent },
+    path: "login", component: UserLoginComponent, children: [
+      { path: "", pathMatch: "full", component: UserLoginComponent },
+      { path: "login", component: UserLoginComponent },
     ]
   },
   {
@@ -36,7 +40,7 @@ const routes: Routes = [
      { path: "listProduct", pathMatch: "full", component: ListProductComponent },
      {path:"updateProduct/product/:productId",component:UpdateProductComponent},
      {path:"updateCategory/category/:categoryId",component:UpdateCategoryComponent},
- 
+     { path: "login", component: LoginComponent },
     ]
   }
 

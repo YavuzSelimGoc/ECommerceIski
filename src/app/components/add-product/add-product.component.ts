@@ -34,6 +34,7 @@ export class AddProductComponent implements OnInit {
       productStock:["",Validators.required],
       productImage:["",Validators.required],
       productPrice:["",Validators.required],
+      productContent:["",Validators.required],
     })
   }
   add(){

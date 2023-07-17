@@ -1,4 +1,4 @@
-<aside class="main-sidebar sidebar-dark-primary elevation-4 ">
+<aside class="main-sidebar sidebar-dark-primary elevation-4 text-white ">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
       <img src="../../../assets/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
@@ -21,18 +21,66 @@
 
 
       <!-- Sidebar Menu -->
-      <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+      <nav class="mt-2 text-white">
+        <ul style="color: white !important;" class="nav nav-pills nav-sidebar flex-column text-white" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
         
-          <li  class="nav-item menu-open">
+          <li style="color: white !important;"  class="nav-item menu-open">
             <a href="pages/widgets.html" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p class="text-white">
                 KATEGORİLER
               </p>
             </a>
+          </li>
+          <li  class="nav-item text-white">
+            <a class="nav-link text-white">
+              <i class="nav-icon fas fa-edit"></i>
+              <p class="text-white">
+                Ürünler
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a routerLink="/admin/listProduct" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p class="text-white">Ürünler Listesi</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a routerLink="/admin/addProduct" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p class="text-white">Ürün Ekle</p>
+                </a>
+              </li>
+      
+            </ul>
+          </li>
+          <li class="nav-item text-white">
+            <a  class="nav-link text-white">
+              <i class="nav-icon fas fa-edit"></i>
+              <p class="text-white">
+                Kategori
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a routerLink="/admin/listCategory" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p class="text-white">Kategoriler Listesi</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a routerLink="/admin/addCategory" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p class="text-white">Kategori Ekle</p>
+                </a>
+              </li>
+      
+            </ul>
           </li>
 
         </ul>

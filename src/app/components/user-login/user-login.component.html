@@ -1,0 +1,45 @@
+
+    <div class="container " id="container">
+        <div class="form-container sign-up-container">
+            <form [formGroup]="registerForm">
+                <h1>Kayıt Ol</h1>
+                <div class="social-container">
+                    
+                </div>
+                <input type="text" formControlName="firstName" placeholder="Adınız" />
+                <input type="text" formControlName="lastName" placeholder="Soyadınız" />
+                <input type="text" formControlName="userName" placeholder="Kullanıcı Adı" />
+                <input type="password" formControlName="password" placeholder="Password" />
+                <button (click)="register();" >Kayıt Ol</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form [formGroup]="loginForm">
+                <h1>Giriş Yap</h1>
+                <div class="social-container">
+               
+                </div>
+                <span></span>
+                <input type="email"  formControlName="userName" placeholder="Kullanıcı Adı" />
+                <input type="password"  formControlName="password" placeholder="Şifre" />
+               
+                <button (click)="login();" >Giriş Yap</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Hoş Geldin</h1>
+                    <p>Eğer bir hesabın varsa giriş yapabilirsin</p>
+                    <button class="ghost" id="signIn">Giriş Yap</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Merhaba, Dostum</h1>
+                    <p>Henüz bir hesabın yoksa hemen kayıt ol.</p>
+                    <button class="ghost" id="signUp">Kayıt Ol</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+

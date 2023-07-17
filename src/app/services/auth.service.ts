@@ -1,3 +1,4 @@
+import { User } from './../models/user';
 import { environment } from './../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -17,6 +18,10 @@ export class AuthService {
     return this.httpclient.post<TokenModel>
     (this.apiUrl+"api/auth/login",loginModel)
   }
+  register(user:User){
+    let newPath=this.apiUrl+"api/Auth/register";
+    return this.httpclient.post(newPath,user)
+   }
   
   isAuthenticated(){
     if(localStorage.getItem("token")){
