@@ -50,10 +50,14 @@
             <div class="single_product_item">
               <img routerLink="productDetails/{{item.productId}}" [src]="createImgPath(item.productImage)" alt="product" style="height: 280px; width:263px;">
               <div class="single_product_text">
-                <h4 class="">{{item.productName}}</h4>
+                
+                <h4 class="">{{item.productName}}  </h4>  
                 <h3>${{item.productPrice}}</h3>
-               
-                <a   (click)="add(item)"  class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+              <div class="row">
+                <a   (click)="add(item)"  class="add_cart">+ Sepete Ekle </a>
+                <a  (click)="addFavorite(item)"  class="ti-heart mt-2"></a>
+              </div>
+             
               </div>
             </div>
           </form>

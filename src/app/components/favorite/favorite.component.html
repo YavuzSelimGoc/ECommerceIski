@@ -1,0 +1,55 @@
+<section class="cart_area padding_top">
+    <div class="container">
+      <form [formGroup]="favoriteForm">
+      <div *ngIf="!isTrue" class="cart_inner">
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">X</th>
+                <th scope="col">Product</th>
+                <th scope="col">Price</th>
+                <th scope="col">Sepete Ekle</th>
+               
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of products">
+                <td>
+                  <a (click)="delete(item);" href="/favoriler" class="btn btn-danger">sil</a>
+                </td>
+                <td>
+                 
+                  <div class="media">
+                    <div class="d-flex">
+                      <img routerLink="productDetails/{{item.productId}}"  [src]="createImgPath(item.productImage)" alt="product" style="height: 100px; width:147px;">
+                    </div>
+                    <div class="media-body">
+                      <p routerLink="productDetails/{{item.productId}}" >{{item.productName}}</p>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <h5>${{item.productPrice}}</h5>
+                </td>
+                <td>
+                    <a (click)="add(item)"  class="genric-btn primary circle">Sepete Ekle</a>
+                </td>
+                
+     
+              </tr>
+        
+           
+            </tbody>
+          </table>
+          <!-- <a href="#" class="genric-btn primary circle float-right">Siparişi Tamamla</a> -->
+        </div>
+      </div>
+    </form>
+    <div *ngIf="isTrue">
+      <h1 class="h1f">Çevrimdışı Görünüyorsunuz Giriş Yapınız </h1>
+      <div class="d-flex justify-content-center"><button routerLink="/login" class="btn btn-info mt-5">GİRİŞ</button> </div>
+      
+    </div>
+   
+  </div></section>

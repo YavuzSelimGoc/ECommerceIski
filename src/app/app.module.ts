@@ -31,6 +31,8 @@ import { CarouselComponent } from './components/carousel/carousel.component';
 import { UserLoginComponent } from './components/user-login/user-login.component';
 import { ProductPipe } from './pipe/product.pipe';
 import { CkeditorTestComponent } from './components/ckeditor-test/ckeditor-test.component';
+import { FavoriteComponent } from './components/favorite/favorite.component';
+import { LoginLayoutComponent } from './components/login-layout/login-layout.component';
 
 
 @NgModule({
@@ -58,6 +60,8 @@ import { CkeditorTestComponent } from './components/ckeditor-test/ckeditor-test.
     UserLoginComponent,
     ProductPipe,
     CkeditorTestComponent,
+    FavoriteComponent,
+    LoginLayoutComponent,
  
   ],
   imports: [

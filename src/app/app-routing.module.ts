@@ -1,3 +1,6 @@
+import { LoginLayoutComponent } from './components/login-layout/login-layout.component';
+import { FavoriteComponent } from './components/favorite/favorite.component';
+
 import { UpdateProductComponent } from './components/update-product/update-product.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { BasketComponent } from './components/basket/basket.component';
@@ -23,13 +26,15 @@ const routes: Routes = [
       {path:"sepet",component:BasketComponent},
       {path:"productDetails/:id",component:ProductDetailsComponent},
       {path:"product/:categoryId",component:MainComponent},
+      {path:"favoriler",component:FavoriteComponent},
       {path:"ck",component:CkeditorTestComponent},
     ]
   },
   {
-    path: "login", component: UserLoginComponent, children: [
+    path: "login", component: LoginLayoutComponent, children: [
       { path: "", pathMatch: "full", component: UserLoginComponent },
       { path: "login", component: UserLoginComponent },
+      { path: "admin", component: LoginComponent },
     ]
   },
   {
@@ -40,7 +45,7 @@ const routes: Routes = [
      { path: "listProduct", pathMatch: "full", component: ListProductComponent },
      {path:"updateProduct/product/:productId",component:UpdateProductComponent},
      {path:"updateCategory/category/:categoryId",component:UpdateCategoryComponent},
-     { path: "login", component: LoginComponent },
+   
     ]
   }
 

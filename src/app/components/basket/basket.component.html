@@ -1,11 +1,13 @@
 <section class="cart_area padding_top">
     <div class="container">
       <form [formGroup]="basketForm">
-      <div class="cart_inner">
+      <div *ngIf="!isTrue" class="cart_inner">
         <div class="table-responsive">
           <table class="table">
             <thead>
               <tr>
+
+                <th scope="col">Sepetten Çıkart</th>
                 <th scope="col">Product</th>
                 <th scope="col">Price</th>
                 <th scope="col">Quantity</th>
@@ -13,15 +15,15 @@
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let item of products">
+              <tr *ngFor="let item of basketListDto">
                 <td>
-                  <a (click)="delete(item);" href="/sepet" class="btn btn-danger">sil</a>
+                  <a (click)="delete(item.basketId);" href="/sepet" class="btn btn-danger">Çıkart</a>
                 </td>
                 <td>
                  
                   <div class="media">
                     <div class="d-flex">
-                      <img [src]="createImgPath(item.productImage)" alt="product" style="height: 100px; width:147px;">
+                      <img [src]="createImgPath(item.img)" alt="product" style="height: 100px; width:147px;">
                     </div>
                     <div class="media-body">
                       <p>{{item.productName}}</p>
@@ -29,17 +31,17 @@
                   </div>
                 </td>
                 <td>
-                  <h5>${{item.productPrice}}</h5>
+                  <h5>${{item.price}}</h5>
                 </td>
                 <td>
                   <div class="product_count">
                     <span class="input-number-decrement"> <i class="ti-angle-down"></i></span>
-                    <input class="input-number" type="text" formControlName="quant{{item.productId}}" value="1" min="0" max="10">
+                    <input class="input-number" type="text"  [value]="item.quantity" min="0" [max]="item.stock">
                     <span class="input-number-increment"> <i class="ti-angle-up"></i></span>
                   </div>
                 </td>
                 <td>
-                  <h5>${{item.productPrice*quantity[item.productId]}}</h5>
+                  <h5>${{item.total}}</h5>
                 </td> 
               </tr>
         
@@ -51,7 +53,7 @@
                   <h5>Subtotal</h5>
                 </td>
                 <td>
-                  <h5>${{2160.00}}</h5>
+                  <h5>${{totalize}}</h5>
                 </td>
               </tr>
            
@@ -61,4 +63,10 @@
         </div>
       </div>
     </form>
+    <div *ngIf="isTrue">
+      <h1 class="h1f">Çevrimdışı Görünüyorsunuz Giriş Yapınız </h1>
+      <div class="d-flex justify-content-center"><button routerLink="/login" class="btn btn-info mt-5">GİRİŞ</button> </div>
+      
+    </div>
+   
   </div></section>
